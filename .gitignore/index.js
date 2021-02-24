@@ -8,6 +8,8 @@ const client = new CommandoClient ({
 
 });
 
+client.login(process.env.TOKEN);
+
 client.registry
     .registerDefaultTypes()
     .registerDefaultGroups()
@@ -28,4 +30,3 @@ client.once('ready', () => {
 
 client.on('error', (error) => console.error(error));
 
-client.login(process.env.TOKEN);
